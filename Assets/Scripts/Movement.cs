@@ -8,10 +8,12 @@ public class Movement : MonoBehaviour
     [SerializeField] float rotationThrust = 1000;
 
     Rigidbody playerRigidbody;
+    AudioSource audioSource;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -25,6 +27,14 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             playerRigidbody.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            audioSource.Stop();
         }
     }
 
@@ -38,14 +48,12 @@ public class Movement : MonoBehaviour
         {
             ApplyRotation(-rotationThrust);
         }
-        /* else if (Input.GetKey(KeyCode.S))
-        {
-            transform.Rotate(Vector3.left * rotationThrust * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            transform.Rotate(Vector3.right * rotationThrust * Time.deltaTime);
-        } */
+        // if (Input.GetAxis("Mouse Z") < 0){
+        //     transform.Rotate(Vector3.left * rotationThrust * Time.deltaTime);
+        // }
+        // else if (Input.GetAxis("Mouse Z") > 0){
+        //     transform.Rotate(Vector3.right * rotationThrust * Time.deltaTime);
+        // }
     }
 
     void ApplyRotation(float rotationDirection)
