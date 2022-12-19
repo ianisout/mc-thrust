@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] float mainThrust = 1000;
     [SerializeField] float rotationThrust = 1000;
+    [SerializeField] AudioClip mainEngine;
 
     Rigidbody playerRigidbody;
     AudioSource audioSource;
@@ -29,7 +30,7 @@ public class Movement : MonoBehaviour
             playerRigidbody.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngine);
             }
         }
         else
@@ -40,20 +41,23 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.Space))
         {
-            ApplyRotation(rotationThrust);
+            if (Input.GetKey(KeyCode.A))
+            {
+                ApplyRotation(rotationThrust);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                ApplyRotation(-rotationThrust);
+            }
+            // if (Input.GetAxis("Mouse Z") < 0){
+            //     transform.Rotate(Vector3.left * rotationThrust * Time.deltaTime);
+            // }
+            // else if (Input.GetAxis("Mouse Z") > 0){
+            //     transform.Rotate(Vector3.right * rotationThrust * Time.deltaTime);
+            // }
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            ApplyRotation(-rotationThrust);
-        }
-        // if (Input.GetAxis("Mouse Z") < 0){
-        //     transform.Rotate(Vector3.left * rotationThrust * Time.deltaTime);
-        // }
-        // else if (Input.GetAxis("Mouse Z") > 0){
-        //     transform.Rotate(Vector3.right * rotationThrust * Time.deltaTime);
-        // }
     }
 
     void ApplyRotation(float rotationDirection)
