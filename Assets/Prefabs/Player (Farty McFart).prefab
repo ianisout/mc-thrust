@@ -1217,6 +1217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 400
   rotationThrust: 300
+  mainEngine: {fileID: 8300000, guid: 4a5566cd9f9a2454e82f33f99256f600, type: 3}
 --- !u!82 &1843370916
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1227,9 +1228,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4a5566cd9f9a2454e82f33f99256f600, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.609
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1326,6 +1327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadDelay: 2
+  successSFX: {fileID: 8300000, guid: fb724d1aab6665540a78e385a1d835a7, type: 3}
+  crashSFX: {fileID: 8300000, guid: bb8a0d3e7be657743bbd7a44d6f55fdf, type: 3}
 --- !u!1 &6550235423716017507
 GameObject:
   m_ObjectHideFlags: 0
