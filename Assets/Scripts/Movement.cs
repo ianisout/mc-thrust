@@ -8,6 +8,10 @@ public class Movement : MonoBehaviour
     [SerializeField] float rotationThrust = 1000;
     [SerializeField] AudioClip mainEngine;
 
+    [SerializeField] ParticleSystem mainEngineParticles;
+    [SerializeField] ParticleSystem leftThrusterParticles;
+    [SerializeField] ParticleSystem rightThrusterParticles;
+
     Rigidbody playerRigidbody;
     AudioSource audioSource;
 
@@ -32,31 +36,44 @@ public class Movement : MonoBehaviour
             {
                 audioSource.PlayOneShot(mainEngine);
             }
+
+            if (!mainEngineParticles.isPlaying)
+            {
+                mainEngineParticles.Play();
+            }
         }
         else
         {
             audioSource.Stop();
+            mainEngineParticles.Stop();
         }
     }
 
     void ProcessRotation()
     {
-        if (Input.GetKey(KeyCode.Space))
+
+        if (Input.GetKey(KeyCode.A))
         {
-            if (Input.GetKey(KeyCode.A))
+            ApplyRotation(rotationThrust);
+            
+            if (!leftThrusterParticles.isPlaying)
             {
-                ApplyRotation(rotationThrust);
+                leftThrusterParticles.Play();
             }
-            else if (Input.GetKey(KeyCode.D))
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            ApplyRotation(-rotationThrust);
+
+            if (!rightThrusterParticles.isPlaying)
             {
-                ApplyRotation(-rotationThrust);
+                rightThrusterParticles.Play();
             }
-            // if (Input.GetAxis("Mouse Z") < 0){
-            //     transform.Rotate(Vector3.left * rotationThrust * Time.deltaTime);
-            // }
-            // else if (Input.GetAxis("Mouse Z") > 0){
-            //     transform.Rotate(Vector3.right * rotationThrust * Time.deltaTime);
-            // }
+        }
+        else 
+        {
+            leftThrusterParticles.Stop();
+            rightThrusterParticles.Stop();
         }
     }
 
