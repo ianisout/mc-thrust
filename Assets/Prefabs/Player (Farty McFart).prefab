@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5462692650543922338}
-  m_LocalRotation: {x: 0.113798015, y: -0, z: -0, w: 0.9935039}
-  m_LocalPosition: {x: 0.35995674, y: 0.918455, z: -2.328}
+  m_LocalRotation: {x: 0.0858464, y: -0.08220033, z: 0.020511454, w: 0.99269974}
+  m_LocalPosition: {x: 0.8050003, y: 0.918455, z: -2.862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6550235423711170868}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 13.069, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.01, y: -9.332, z: 1.548}
 --- !u!108 &2671016119105996974
 Light:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.54
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1258,6 +1258,7 @@ GameObject:
   - component: {fileID: 1843370913}
   - component: {fileID: 1843370916}
   - component: {fileID: 1843370917}
+  - component: {fileID: 8001535203606329781}
   m_Layer: 0
   m_Name: Player (Farty McFart)
   m_TagString: Untagged
@@ -1434,6 +1435,18 @@ MonoBehaviour:
   crashSFX: {fileID: 8300000, guid: bb8a0d3e7be657743bbd7a44d6f55fdf, type: 3}
   successParticles: {fileID: 7084683600298007445}
   crashParticles: {fileID: 6319058061304169323}
+--- !u!114 &8001535203606329781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6550235423711170871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1df42c58c43014d8ab3c57d78fa26a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6550235423716017507
 GameObject:
   m_ObjectHideFlags: 0
