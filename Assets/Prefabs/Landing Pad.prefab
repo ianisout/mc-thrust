@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2834384429076267001}
   m_Layer: 0
   m_Name: Landing Pad
-  m_TagString: Finish
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.9867747, z: 1}
+  m_Center: {x: 0, y: -0.0066121966, z: 0}
 --- !u!1 &8450241500831919807
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8450241500831919807}
   m_LocalRotation: {x: 0.6985728, y: -0, z: -0, w: 0.71553904}
-  m_LocalPosition: {x: -0.0069999695, y: 8.58, z: -0.07}
+  m_LocalPosition: {x: -0.0069999695, y: 9.07, z: -0.015}
   m_LocalScale: {x: 0.33333334, y: 2, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -142,9 +142,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5.98
-  m_Range: 4.27
-  m_SpotAngle: 48.1
+  m_Intensity: 8.36
+  m_Range: 4.79
+  m_SpotAngle: 82
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
