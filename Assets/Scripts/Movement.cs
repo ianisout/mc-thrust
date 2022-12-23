@@ -12,12 +12,11 @@ public class Movement : MonoBehaviour
     [SerializeField] ParticleSystem leftThrusterParticles;
     [SerializeField] ParticleSystem rightThrusterParticles;
 
-    bool inLandingArea = false;
-    bool didRotateForLanding = false;
+    bool rotationStatus = false;
 
     Rigidbody playerRigidbody;
     AudioSource audioSource;
-
+    
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -28,6 +27,11 @@ public class Movement : MonoBehaviour
     {
         ProcessThrust();
         ProcessRotation();
+
+        if(rotationStatus)
+        {
+            RotateForLanding();
+        }
     }
 
     void ProcessThrust()
@@ -93,24 +97,24 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            if (!didRotateForLanding)
+            if (!rotationStatus)
             {
                 RotateLeft();
             }
             else
             {
-                transform.Rotate(-1, 0, 0 * 100 * Time.deltaTime);
+                transform.Rotate(-1, 0, 0.1f * 1 * Time.deltaTime);
             }
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            if (!didRotateForLanding)
+            if (!rotationStatus)
             {
                 RotateRight();
             }
             else
             {
-                transform.Rotate(1, 0, 0 * 100 * Time.deltaTime);
+                transform.Rotate(1, 0, 0.1f * 1 * Time.deltaTime);
             }
         }
         else
@@ -129,28 +133,28 @@ public class Movement : MonoBehaviour
     void OnTriggerEnter(Collider other) 
     {        
         playerRigidbody.drag = 3;
-        inLandingArea = true;
 
-        if (!didRotateForLanding)
+        if (!rotationStatus)
         {
-            transform.Rotate(0, 90, 0 * 100 * Time.deltaTime);
-            didRotateForLanding = true;
+            rotationStatus = true;
         }
     }
-
+    
     void OnTriggerExit(Collider other)
     {
-        inLandingArea = false;
+        playerRigidbody.drag = 10;
+
+        // CREATE YOU'RE LOSING THE BATTLE MESSAGE
     }
 
-    /* THIS ONE IS WORKING ON UPDATE FOR SMOOTH ROTATION*/
-
-    // void RotateForLanding()
-    // {
-    //     if (transform.rotation.y < 0.7)
-    //     {
-    //         Debug.Log(transform.rotation.y);
-    //         transform.Rotate(0, 1, 0 * 100 * Time.deltaTime);
-    //     }
-    // }
+    void RotateForLanding()
+    {
+        if (transform.rotation.y < 0.7)
+        {
+            transform.Rotate(0, 1, 0 * 100 * Time.deltaTime);
+        }
+    }
 }
+
+// for further reference (maybe?)
+// transform.Rotate(0, 90, 0 * 100 * Time.deltaTime);
