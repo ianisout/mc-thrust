@@ -142,7 +142,7 @@ public class Movement : MonoBehaviour
     
     void OnTriggerExit(Collider other)
     {
-        playerRigidbody.drag = 10;
+        // playerRigidbody.drag = 10;
 
         // CREATE YOU'RE LOSING THE BATTLE MESSAGE
     }
