@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
+    [SerializeField] string url;
 
     public void LoadGame()
     {
@@ -37,6 +38,22 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
+
+    public void LoadCreditLesfm()
+    {
+        Application.OpenURL("https://pixabay.com/users/lesfm-22579021/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=10900");
+    }
+
+    public void LoadCreditPenguin()
+    {
+        Application.OpenURL("https://pixabay.com/users/penguinmusic-24940186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=14194");
+    }
+
+    public void LoadCreditLexin()
+    {
+        Application.OpenURL("https://pixabay.com/users/lexin_music-28841948/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=115668");
+    }
+
 
     IEnumerator WaitAndLoad(string sceneName, float delay)
     {
