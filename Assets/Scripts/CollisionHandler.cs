@@ -20,22 +20,22 @@ public class CollisionHandler : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-        RespondToDebugKeys();
-    }
+    // void Update()
+    // {
+    //     RespondToDebugKeys();
+    // }
 
-    void RespondToDebugKeys()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadNextLevel();
-        }
-        else if (Input.GetKeyDown(KeyCode.C))
-        {
-            collisionDisabled = !collisionDisabled;
-        }
-    }
+    // void RespondToDebugKeys()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.L))
+    //     {
+    //         LoadNextLevel();
+    //     }
+    //     else if (Input.GetKeyDown(KeyCode.C))
+    //     {
+    //         collisionDisabled = !collisionDisabled;
+    //     }
+    // }
 
     void OnCollisionEnter(Collision other)
     {

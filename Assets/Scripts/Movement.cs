@@ -102,7 +102,7 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             if (!rotationStatus)
             {
@@ -113,7 +113,7 @@ public class Movement : MonoBehaviour
                 transform.Rotate(-1, 0, 0.1f * 1 * Time.deltaTime);
             }
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (!rotationStatus)
             {
