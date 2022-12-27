@@ -5,7 +5,6 @@
 This is an ongoing project I come back every now and then to add more difficult and complex levels to. The (silly, rudimentary) physics are there, I just moved on to other projects to keep learning new stuff.
 
 <img src="screenshot-farty.png" alt="Farty McFart screenshot" width="400" height="250">
-<br>
 
 ## Check the game out <a href="https://i.simmer.io/@ianisout/farty-mcfart"> HERE! </a> 💨
 
