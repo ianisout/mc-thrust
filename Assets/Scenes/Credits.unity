@@ -1187,7 +1187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342.1, y: 62.100006}
+  m_AnchoredPosition: {x: 414.00006, y: 85}
   m_SizeDelta: {x: 85, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &232962329
@@ -2828,7 +2828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342.1, y: 97}
+  m_AnchoredPosition: {x: 414, y: 132}
   m_SizeDelta: {x: 85, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830915599
@@ -3635,7 +3635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Free Naturestarterkit2 from unity story\n\n- SFX:\n   - free from mixit\n\n-music\n     
+  m_text: "- Free Naturestarterkit2 from unity story     - SFX:  free from mixit\n\n-music\n     
     - Lesfm from pixabay   - - - - - - - - - - \n      - penguinmusic from pixabay 
     - - - - - -\n      - Lexin_Music from pixabay  - - - - - - - "
   m_isRightToLeft: 0
@@ -3664,8 +3664,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5522,7 +5522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21100001, y: 0.29377198}
   m_AnchorMax: {x: 0.94446915, y: 0.5}
-  m_AnchoredPosition: {x: 258, y: 227}
+  m_AnchoredPosition: {x: 297, y: 227}
   m_SizeDelta: {x: 660.1932, y: 108.25511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063906495
@@ -5572,8 +5572,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.1
-  m_fontSizeBase: 32.1
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5659,7 +5659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342.1, y: 79.50001}
+  m_AnchoredPosition: {x: 414.00006, y: 108}
   m_SizeDelta: {x: 85, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078960398
