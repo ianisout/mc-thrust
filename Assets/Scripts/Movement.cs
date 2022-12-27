@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] float mainThrust = 1000;
     [SerializeField] float rotationThrust = 300;
-    [SerializeField] AudioClip mainEngine;
+    [SerializeField] List<AudioClip> mainEngineSFX;
 
     [SerializeField] ParticleSystem mainEngineParticles;
     [SerializeField] ParticleSystem leftThrusterParticles;
@@ -34,6 +33,14 @@ public class Movement : MonoBehaviour
         }
     }
 
+    int GetRandomThrustSFX()
+    {
+        int limitNumber = mainEngineSFX.Count;
+        int randomSFXIndex = Random.Range(0, limitNumber);
+
+        return randomSFXIndex;
+    }
+
     void ProcessThrust()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -52,7 +59,7 @@ public class Movement : MonoBehaviour
 
         if (!audioSource.isPlaying)
         {
-            audioSource.PlayOneShot(mainEngine);
+            audioSource.PlayOneShot(mainEngineSFX[GetRandomThrustSFX()]);
         }
 
         if (!mainEngineParticles.isPlaying)

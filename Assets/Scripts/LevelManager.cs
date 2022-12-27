@@ -34,7 +34,6 @@ public class LevelManager : MonoBehaviour
 
     public void QuitGame()
     {
-        // FOR WEBGL this needs more work
         Debug.Log("Quitting game...");
         Application.Quit();
     }

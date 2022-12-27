@@ -1223,7 +1223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 300
   rotationThrust: 300
-  mainEngine: {fileID: 8300000, guid: 4a5566cd9f9a2454e82f33f99256f600, type: 3}
+  mainEngineSFX:
+  - {fileID: 8300000, guid: 8843b3b954ade3040975d93039e0405c, type: 3}
+  - {fileID: 8300000, guid: 8cc22b9f020b4bf47b796e1541395fa6, type: 3}
+  - {fileID: 8300000, guid: 4a5566cd9f9a2454e82f33f99256f600, type: 3}
   mainEngineParticles: {fileID: 7529018202349751463}
   leftThrusterParticles: {fileID: 5979142554333412119}
   rightThrusterParticles: {fileID: 5979142552886684380}
@@ -1237,7 +1240,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4a5566cd9f9a2454e82f33f99256f600, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.609
   m_Pitch: 1
@@ -1337,7 +1340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoadDelay: 5
   successSFX: {fileID: 8300000, guid: fb724d1aab6665540a78e385a1d835a7, type: 3}
-  crashSFX: {fileID: 8300000, guid: bb8a0d3e7be657743bbd7a44d6f55fdf, type: 3}
+  crashSFX: {fileID: 8300000, guid: 403a3d84707752f4e9d33741cf34b49a, type: 3}
   successParticles: {fileID: 7084683600298007445}
   crashParticles: {fileID: 6319058061304169323}
 --- !u!114 &8001535203606329781
