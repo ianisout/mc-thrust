@@ -3420,7 +3420,7 @@ PrefabInstance:
     - target: {fileID: 918057821967734573, guid: cb773b0a1abb9984ebf98776bef765f3, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 148153084204fcc45934d014b2c05eb8, type: 3}
+      objectReference: {fileID: 8300000, guid: a0d62e9ed47a0e048b9a034aea02111e, type: 3}
     - target: {fileID: 918057821967734575, guid: cb773b0a1abb9984ebf98776bef765f3, type: 3}
       propertyPath: m_Name
       value: AudioPlayer

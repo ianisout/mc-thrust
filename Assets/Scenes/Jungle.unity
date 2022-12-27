@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30201545, g: 0.22918159, b: 0.17268533, a: 1}
+  m_IndirectSpecularColor: {r: 0.5910161, g: 0.5236135, b: 0.45981467, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6371,7 +6371,7 @@ PrefabInstance:
     - target: {fileID: 918057821967734573, guid: cb773b0a1abb9984ebf98776bef765f3, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d04214f66a552bf408917658b51956a9, type: 3}
+      objectReference: {fileID: 8300000, guid: 794601f6c23000448a3f9cd092db5af8, type: 3}
     - target: {fileID: 918057821967734575, guid: cb773b0a1abb9984ebf98776bef765f3, type: 3}
       propertyPath: m_Name
       value: AudioPlayer

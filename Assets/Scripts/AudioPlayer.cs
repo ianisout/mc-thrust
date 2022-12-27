@@ -23,10 +23,10 @@ public class AudioPlayer : MonoBehaviour
         {
             instance.GetComponentInChildren<AudioSource>().enabled = false;
         }
-        else if (instance != null && SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            instance.GetComponentInChildren<AudioSource>().enabled = true;
-        }
+        // else if (instance != null)
+        // {
+        //     instance.GetComponentInChildren<AudioSource>().enabled = true;
+        // }
         else if (instance != null)
         {
             gameObject.SetActive(false);
