@@ -4,7 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] float mainThrust = 1000;
-    [SerializeField] float rotationThrust = 300;
+    [SerializeField] float rotationThrust = 50;
     [SerializeField] List<AudioClip> mainEngineSFX;
 
     [SerializeField] ParticleSystem mainEngineParticles;
