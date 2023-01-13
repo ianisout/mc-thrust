@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using TMPro;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class CollisionHandler : MonoBehaviour
 
     [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem crashParticles;
+
+    [SerializeField] TextMeshProUGUI collisionText;
 
     AudioSource audioSource;
 
@@ -20,22 +24,23 @@ public class CollisionHandler : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // void Update()
-    // {
-    //     RespondToDebugKeys();
-    // }
+    void Update()
+    {
+        RespondToDebugKeys();
+    }
 
-    // void RespondToDebugKeys()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.L))
-    //     {
-    //         LoadNextLevel();
-    //     }
-    //     else if (Input.GetKeyDown(KeyCode.C))
-    //     {
-    //         collisionDisabled = !collisionDisabled;
-    //     }
-    // }
+    void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisabled = !collisionDisabled;
+            StartCoroutine(toggleCollisionText());
+        }
+    }
 
     void OnCollisionEnter(Collision other)
     {
@@ -95,5 +100,21 @@ public class CollisionHandler : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);        
+    }
+
+    private IEnumerator toggleCollisionText()
+    {
+        if (collisionDisabled)
+        {
+            collisionText.text = "Collision off";
+        }
+        else
+        {
+            collisionText.text = "Collision on";
+        }
+
+        yield return new WaitForSeconds(1.5f);
+
+        collisionText.text = "";
     }
 }
